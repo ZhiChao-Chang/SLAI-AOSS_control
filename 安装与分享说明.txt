@@ -1,0 +1,59 @@
+SLAI AOSS Codex Skill — 分享包
+
+一、先找到自己的信息
+默认面向已有学校配置 SLAI 资源的河套学生，不从申请账户或购买资源讲起。
+Codex 会引导打开商汤大装置平台，进入对象存储桶概览，找到自己的桶、服务 endpoint 和公网/内网地址；
+再指引到头像菜单的 AccessKey 管理入口，使用自己的 AK/SK。工具需要 Python 3.10+。
+技能不包含共享账户、资源额度、任何人的密钥或个人配置。
+
+二、安装技能
+先完整解压 ZIP。进入 install_skill.py 所在目录。
+
+Windows PowerShell：
+    py -3 install_skill.py
+
+macOS / Linux / WSL：
+    python3 install_skill.py
+
+默认安装到当前用户的 ~/.codex/skills/slai-aoss；设置了 CODEX_HOME 则安装到对应 skills。
+已有同名技能会停止，不会悄悄覆盖。确需更新时执行相同命令并加 --replace，旧版自动备份。
+支持 --skills-dir 指定真正运行 Codex 的环境目录。Windows 与 WSL 安装是两回事。
+安装器不联网、不装 Python 依赖、不配置密钥、不连接 AOSS。
+
+也可手动把 slai-aoss 文件夹整体放到 Codex skills 目录。不要只复制 SKILL.md，也不要多套一层目录。
+
+三、重新打开 Codex，直接发这句话
+
+    使用 $slai-aoss 帮我配置 SLAI 大装置 AOSS。我是首次使用，请确认系统、
+    引导安装依赖、填写我自己的 endpoint 和桶，并让我在本机终端隐藏输入凭据。
+    不要让我把 AK/SK 发到聊天，先只做只读连通验证，不创建桶、不设公共读、不上传测试文件。
+
+四、接下来会发生什么
+Codex 会读取 skill，安装专用 Python 虚拟环境和固定版本 boto3，指导填写非秘密配置。
+AK/SK 由你在自己的终端隐藏输入；默认保存在自己的 ~/.config/slai-aoss/ 下，和 skill 分离。
+Windows 文件权限还需使用个人用户目录/ACL 保护。永远不要把这个配置目录发给同学。
+首次只读验证成功后，可要求上传、下载指定文件、生成临时链接，或使用 ads-cli 做目录同步。
+看不到桶时先检查区域、资源空间和当前账号；地址错误则回到桶概览核对，不把“不会找”当成没有资源。
+
+服务器端也能用：references/server-download.md 提供完整步骤。
+服务器不需要安装 Codex；在服务器终端准备工具、配置自己的内网/公网 endpoint，
+即可从 AOSS 直接下载到服务器目录或已经挂载的 AFS，不必经电脑中转。
+本地环境变量和配置不会自动同步到服务器；不能把未挂载的 /mnt/afs 当成持久存储。
+
+五、日常使用示例
+    使用 $slai-aoss 将我指定的本地文件上传到 course profile 的 data/ 前缀，默认不要覆盖。
+    使用 $slai-aoss 列出 course profile 下的 results/，最多20项。
+    使用 $slai-aoss 下载指定对象，并用可信 SHA-256 校验。
+    使用 $slai-aoss 帮我规划目录增量同步，先检查方向和覆盖行为，不删除数据。
+    使用 $slai-aoss 教我把桶里的 dataset/example.bin 下载到服务器，先解释每条命令在哪台机器执行。
+
+六、边界
+SLAI AOSS 是 SenseCore 对象存储，不是模型 API，也不是 AWS OpenSearch Serverless。
+技能不启动或管理 CCI/ACP，不要求购买算力，不擅自删除对象或公开桶。
+包内工具行为有无网络模拟测试；未借任何人的真实凭据做共享桶验收。
+当前打包环境为 Linux；Windows/macOS 有安装指导，但应在各自系统先跑只读验证。
+首次工具安装需要网络；对象访问取决于你所在网络是否可达所选 endpoint。
+
+七、可以分享什么
+把本 ZIP 原样发给同学即可。不要打包自己的 ~/.config/slai-aoss、.aws、环境文件或私密链接。
+SHA256SUMS.txt 可校验包内源文件。skill 的 SKILL.md 是 Codex 的入口，references 是按需阅读文档。

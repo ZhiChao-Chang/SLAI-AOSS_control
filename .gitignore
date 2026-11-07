@@ -1,0 +1,11 @@
+__pycache__/
+*.pyc
+.venv/
+.env
+.env.*
+.DS_Store
+Thumbs.db
+credentials/
+tool-venv/
+private-download-link.txt
+*.log

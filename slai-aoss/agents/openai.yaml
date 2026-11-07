@@ -1,0 +1,4 @@
+interface:
+  display_name: "SLAI AOSS 对象存储"
+  short_description: "配置 SLAI 大装置对象存储，验证连接并安全上传、下载和分享文件"
+  default_prompt: "使用 $slai-aoss 引导我配置自己的 AOSS 账户，并先做只读连接验证。"
