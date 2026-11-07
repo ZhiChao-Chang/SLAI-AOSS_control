@@ -6,7 +6,19 @@ Codex 会引导打开商汤大装置平台，进入对象存储桶概览，找�
 再指引到头像菜单的 AccessKey 管理入口，使用自己的 AK/SK。工具需要 Python 3.10+。
 技能不包含共享账户、资源额度、任何人的密钥或个人配置。
 
-二、安装技能
+二、直接交给 Codex 安装（推荐）
+不用自己下载 ZIP 或运行脚本。把下面这段发给自己电脑上的 Codex：
+
+    请安装 https://github.com/ZhiChao-Chang/SLAI-AOSS_control 仓库中的 slai-aoss skill。
+    技能目录是 slai-aoss。安装后引导我配置商汤大装置平台 AOSS，
+    让我在自己的终端隐藏输入凭据，先做只读连接验证。
+
+技能目录直接链接：
+https://github.com/ZhiChao-Chang/SLAI-AOSS_control/tree/main/slai-aoss
+
+Codex 安装后未发现技能时，再重新打开会话。
+
+备用手动安装（仅无法直接安装时使用）：
 先完整解压 ZIP。进入 install_skill.py 所在目录。
 
 Windows PowerShell：

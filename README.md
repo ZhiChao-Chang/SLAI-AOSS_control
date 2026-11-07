@@ -6,7 +6,31 @@
 
 这是学生使用的非官方工具，不代表 SLAI 或商汤官方产品；不附带共享账号、密钥或资源。默认同学已有学校配置的资源，不要求另行注册或购买。
 
-## 安装到 Codex
+## 直接交给 Codex 安装（推荐）
+
+**不用自己下载 ZIP、解压或运行安装脚本。** 把下面这段直接发给自己电脑上的 Codex：
+
+```text
+请安装这个 GitHub 仓库中的 slai-aoss skill：
+https://github.com/ZhiChao-Chang/SLAI-AOSS_control
+技能目录是 slai-aoss。
+安装完成后告诉我，再引导我找到商汤大装置平台上自己的桶和 endpoint。
+AK/SK 让我在本机终端隐藏输入，不发到聊天；先做只读连接验证。
+```
+
+也可把技能目录的直接链接交给 Codex：
+<https://github.com/ZhiChao-Chang/SLAI-AOSS_control/tree/main/slai-aoss>
+
+Codex 可以使用内置的 `$skill-installer` 从 GitHub 安装。安装后未识别到技能时，再重新打开会话。接着发送：
+
+```text
+使用 $slai-aoss 帮我配置商汤大装置平台的 AOSS。
+```
+
+安装和工具准备由 Codex 引导完成；同学只需找到自己的资源信息，并在本机终端录入自己的凭据。[OpenAI 官方技能安装说明](https://learn.chatgpt.com/docs/build-skills#install-curated-skills-for-local-use)
+
+<details>
+<summary>备用：手动安装（Codex 无法直接下载安装时再看）</summary>
 
 下载本仓库 ZIP 并完整解压，或：
 
@@ -31,15 +55,10 @@ python3 install_skill.py
 
 安装器本身不联网、不装工具依赖、不配置凭据、不访问桶。需要 Python 3.10+ 执行技能工具。
 
-**重新打开 Codex 会话，发送：**
 
-```text
-使用 $slai-aoss 帮我配置商汤大装置平台的 AOSS。
-引导我找到自己的桶和 endpoint，让我在自己的终端隐藏输入 AK/SK，
-先做只读连接验证，不把密钥发到聊天。
-```
+安装器默认使用 `~/.codex/skills/`；若当前 Codex 实际使用 `~/.agents/skills/` 等其他位置，可加 `--skills-dir` 指定对应目录。推荐优先让 Codex 根据自身环境安装，而不是同学手动判断。
 
-Codex 会引导安装专用虚拟环境中的 SDK 工具、找到自己的资源信息并验证配置。也可以手动把完整 `slai-aoss/` 目录复制到 skills 目录，不要只复制 `SKILL.md`。
+</details>
 
 ## 如何引导首次使用
 
