@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="320" viewBox="0 0 1200 320" role="img" aria-labelledby="title desc">
+  <title id="title">SLAI AOSS Control</title>
+  <desc id="desc">A Codex skill connecting your computer, SenseCore AOSS, and a server or AFS. The server does not need Codex.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0c1725"/>
+      <stop offset="1" stop-color="#132d35"/>
+    </linearGradient>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M 32 0 L 0 0 0 32" fill="none" stroke="#aec7ce" stroke-opacity=".055"/>
+    </pattern>
+    <marker id="arrow" markerWidth="6" markerHeight="6" refX="4.8" refY="3" orient="auto-start-reverse">
+      <path d="M0 0 6 3 0 6" fill="none" stroke="#5bd6af" stroke-width="1.3"/>
+    </marker>
+  </defs>
+  <rect width="1200" height="320" rx="18" fill="url(#bg)"/>
+  <rect width="1200" height="320" rx="18" fill="url(#grid)"/>
+  <rect x="48" y="43" width="4" height="22" rx="2" fill="#5bd6af"/>
+  <text x="65" y="59" fill="#8eabae" font-size="14" font-weight="600" letter-spacing="3" font-family="Arial, Helvetica, sans-serif">CODEX SKILL / HETAO</text>
+  <text x="47" y="120" fill="#f1f7f7" font-size="48" font-weight="700" letter-spacing="-1.4" font-family="Arial, Helvetica, sans-serif">SLAI AOSS Control</text>
+  <text x="50" y="151" fill="#9bb8bd" font-size="19" font-family="Arial, Helvetica, sans-serif">Object storage, guided by Codex.</text>
+  <g font-family="Arial, Helvetica, sans-serif">
+    <rect x="48" y="192" width="252" height="72" rx="12" fill="#162b3b" stroke="#36505d"/>
+    <rect x="474" y="192" width="252" height="72" rx="12" fill="#183e3d" stroke="#5bd6af" stroke-opacity=".7"/>
+    <rect x="900" y="192" width="252" height="72" rx="12" fill="#162b3b" stroke="#36505d"/>
+    <text x="174" y="223" text-anchor="middle" fill="#edf5f5" font-size="21" font-weight="600">Your computer</text>
+    <text x="174" y="247" text-anchor="middle" fill="#8faab5" font-size="14">Codex + personal configuration</text>
+    <text x="600" y="223" text-anchor="middle" fill="#adf3da" font-size="23" font-weight="700">AOSS</text>
+    <text x="600" y="247" text-anchor="middle" fill="#9ec9c1" font-size="14">SenseCore object storage</text>
+    <text x="1026" y="223" text-anchor="middle" fill="#edf5f5" font-size="21" font-weight="600">Server / AFS</text>
+    <text x="1026" y="247" text-anchor="middle" fill="#8faab5" font-size="14">No Codex installation required</text>
+    <path d="M318 228 H455" stroke="#5bd6af" stroke-width="2" marker-start="url(#arrow)" marker-end="url(#arrow)"/>
+    <path d="M744 228 H881" stroke="#5bd6af" stroke-width="2" marker-start="url(#arrow)" marker-end="url(#arrow)"/>
+    <text x="386" y="214" text-anchor="middle" fill="#88a9aa" font-size="12">UPLOAD / DOWNLOAD</text>
+    <text x="813" y="214" text-anchor="middle" fill="#88a9aa" font-size="12">DIRECT TRANSFER</text>
+  </g>
+  <text x="1151" y="59" text-anchor="end" fill="#5bd6af" font-size="13" letter-spacing="2" font-family="Arial, Helvetica, sans-serif">CONFIGURE · TRANSFER · VERIFY</text>
+</svg>
